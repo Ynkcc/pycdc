@@ -2,6 +2,12 @@ name: MSVC-CI
 on:
   push:
     branches: [master]
+  workflow_dispatch:
+    inputs:
+       message:
+          description: 'Optional message to include in the workflow run'
+          required: false
+          default: 'Manually triggered workflow run'
   pull_request:
 
 jobs:
